@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "firstmod",
+  "version": "${version}",
+  "name": "FirstMod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/firstmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.rc.firstmod.client.FirstmodDataGenerator"
+    ],
+    "client": [
+      "org.rc.firstmod.client.FirstmodClient"
+    ],
+    "main": [
+      "org.rc.firstmod.Firstmod"
+    ]
+  },
+  "mixins": [
+    "firstmod.mixins.json",
+    {
+      "config": "firstmod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
