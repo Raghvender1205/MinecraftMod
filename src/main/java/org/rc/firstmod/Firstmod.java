@@ -1,6 +1,7 @@
 package org.rc.firstmod;
 
 import net.fabricmc.api.ModInitializer;
+import org.rc.firstmod.registry.ModBlocks;
 import org.rc.firstmod.registry.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,7 @@ public class Firstmod implements ModInitializer {
     @Override
     public void onInitialize() {
         ModItems.registerItems();
-        LOGGER.info("Firstmod initialized");
+        ModBlocks.registerBlocks();
+        LOGGER.info("Mod initialized");
     }
 }
